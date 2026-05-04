@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricerca - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+</head>
+<body>
+    <main class="main-content">
+        <section class="page-section">
+            <div class="search-form">
+                <h2>🔍 Ricerca Meteo</h2>
+                
+                <div class="form-group">
+                    <label for="city-input">Cerca per città:</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="city-input"
+                            placeholder="Es: Milano, Roma, Napoli..."
+                            autocomplete="off"
+                            autofocus
+                        />
+                        <button id="btn-search-city" class="btn btn-primary">Cerca</button>
+                    </div>
+                    <div id="city-suggestions" class="suggestions hidden"></div>
+                </div>
+
+                <div class="divider">O</div>
+
+                <div class="form-group">
+                    <label>Ricerca per coordinate:</label>
+                    <div class="coords-group">
+                        <input
+                            type="number"
+                            id="latitude-input"
+                            placeholder="Latitudine"
+                            step="0.01"
+                            min="-90"
+                            max="90"
+                            value="45.4642"
+                        />
+                        <input
+                            type="number"
+                            id="longitude-input"
+                            placeholder="Longitudine"
+                            step="0.01"
+                            min="-180"
+                            max="180"
+                            value="9.1900"
+                        />
+                        <button id="btn-search-coords" class="btn btn-primary">Cerca</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section result-section-with-favorite">
+            <div id="result-container" class="result-container"></div>
+        </section>
+
+        <section class="page-section location-forecast">
+            <div id="forecast-container" class="forecast-container"></div>
+        </section>
+    </main>
+
+    <script type="module" src="../scripts/pages/search.js"></script>
+</body>
+</html>

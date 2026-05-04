@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+</head>
+<body>
+    <main class="main-content">
+        <section class="home-hero page-section">
+            <h2>Benvenuto su Weather App</h2>
+            <p>
+                Un sito semplice per consultare meteo attuale, previsioni e storico delle citta.
+                Scegli una sezione dal menu oppure usa i collegamenti rapidi qui sotto.
+            </p>
+            <div class="quick-links">
+                <a class="btn btn-primary" href="search.html">Vai a Ricerca</a>
+                <a class="btn btn-secondary" href="archive.html">Apri Archivio</a>
+            </div>
+        </section>
+
+        <section class="home-guide page-section">
+            <h3>Come funziona</h3>
+            <!-- TODO 2: Aggiungi la classe CSS corretta a questo div mostrare le GUIDE come una GRIGLIA -->
+            <div class="">
+                <article class="guide-card">
+                    <h4>1. Cerca una citta</h4>
+                    <p>Vai su Ricerca e inserisci il nome della citta oppure le coordinate geografiche.</p>
+                </article>
+                <article class="guide-card">
+                    <h4>2. Leggi il meteo</h4>
+                    <p>Visualizza meteo corrente e previsioni su una singola schermata compatta.</p>
+                </article>
+                <article class="guide-card">
+                    <h4>3. Salva e consulta</h4>
+                    <p>Usa Preferiti e Cronologia per tornare alle localita piu usate in un click.</p>
+                </article>
+                <article class="guide-card">
+                    <h4>4. Controlla lo storico</h4>
+                    <p>Apri Archivio, scegli una citta e un intervallo date per vedere il meteo passato.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../scripts/pages/index.js"></script>
+</body>
+</html>

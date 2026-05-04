@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivio - Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☀️</text></svg>">
+</head>
+<body>
+    <main class="main-content">
+        <section class="page-section">
+            <div class="search-form">
+                <h2>🗂️ Archivio Meteo</h2>
+                <p class="section-description">Seleziona una citta e un intervallo di date per vedere il meteo passato.</p>
+
+                <div class="form-group">
+                    <label for="archive-city-input">Citta:</label>
+                    <div class="input-wrapper">
+                        <input
+                            type="text"
+                            id="archive-city-input"
+                            placeholder="Es: Torino, Firenze, Bari..."
+                            autocomplete="off"
+                            autofocus
+                        />
+                        <button id="btn-archive-search" class="btn btn-primary">Cerca storico</button>
+                    </div>
+                    <div id="archive-city-suggestions" class="suggestions hidden"></div>
+                </div>
+
+                <div class="form-group archive-date-grid">
+                    <div>
+                        <label for="archive-start-date">Data inizio:</label>
+                        <input type="date" id="archive-start-date">
+                    </div>
+                    <div>
+                        <label for="archive-end-date">Data fine:</label>
+                        <input type="date" id="archive-end-date">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section">
+            <div id="archive-result-container" class="result-container"></div>
+        </section>
+    </main>
+
+    <script type="module" src="../scripts/pages/archive.js"></script>
+</body>
+</html>
